@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP TEMPLATE - RESPONSE</title>
+</head>
+<body>
+    <h1>Hola querido Usuario!</h1>
+    {% if user_ip %}
+        <h2>Tu ip es la siguiente :{{user_ip}}</h2>
+    {% else %}
+        <a href="{{ url_for('index')}}"> Crear Cookie</a>
+    {% endif%}
+
+    <ul>
+    {% for item in lista %}
+        <li>{{item}}</li>
+    {% endfor%}
+    </ul>
+    
+</body>
+</html>
